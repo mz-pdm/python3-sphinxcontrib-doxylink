@@ -43,5 +43,8 @@ them into links to the HTML page of their Doxygen documentation.
 %doc README.rst
 
 %changelog
+* Tue Aug 12 2025 Milan Zamazal <mzamazal@redhat.com> 1.13.0-1
+- new package built with tito
+
 * Mon Aug 11 2025 Milan Zamazal <mzamazal@redhat.com> - 1.13.0-1
 - Initial package
