@@ -1,6 +1,6 @@
 Name:      python3-sphinxcontrib-doxylink
 Version:   1.13.0
-Release:   1
+Release:   4%{?dist}
 Summary:   A Sphinx extension to link to external Doxygen API documentation
 License:   BSD-2-Clause
 URL:       https://github.com/sphinx-contrib/doxylink
@@ -8,6 +8,7 @@ Source0:   https://github.com/sphinx-contrib/doxylink/archive/refs/tags/%{versio
 BuildArch: noarch
 
 BuildRequires: doxygen
+BuildRequires: python3-devel
 BuildRequires: python3-pyparsing
 BuildRequires: python3-pytest
 BuildRequires: python3-sphinx
@@ -43,5 +44,14 @@ them into links to the HTML page of their Doxygen documentation.
 %doc README.rst
 
 %changelog
+* Wed Aug 27 2025 Milan Zamazal <mzamazal@redhat.com> - 1.13.0-4
+- Build-require python3-devel to fix directory owners
+
+* Fri Aug 15 2025 Milan Zamazal <mzamazal@redhat.com> - 1.13.0-3
+- Fix of a macro reference in changelog
+
+* Thu Aug 14 2025 Milan Zamazal <mzamazal@redhat.com> - 1.13.0-2
+- Missing `dist' macro added to Release
+
 * Mon Aug 11 2025 Milan Zamazal <mzamazal@redhat.com> - 1.13.0-1
 - Initial package
